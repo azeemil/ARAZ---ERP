@@ -1,0 +1,1470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B7B7E169-68FD-403E-AC31-4DDE4ED15CB9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ERP</RootNamespace>
+    <AssemblyName>ARAZ - ERP</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>top_home_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.CodeConverter.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.DataAccess.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.Images.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v15.2.UI, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Dashboard.v15.2.Win, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Data.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v15.2.UI, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DemoData.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DevAV.v15.2.Data, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Diagram.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DXCore.Controls.Data.v6.3, Version=15.2.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DXCore.Controls.XtraLayout.v6.3, Version=15.2.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DXCore.Gdi, Version=15.2.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DXCore.Parser, Version=15.2.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DXCore.Wizards80, Version=15.2.4.0, Culture=neutral, PublicKeyToken=35c9f04b7764aa3d, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.ExpressApp.AuditTrail.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Demos.Win.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.EasyTest.WinAdapter.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.ReportsV2.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Scheduler.Win.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Security.EF.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.TreeListEditors.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Validation.Win.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Workflow.Win.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.ExpressApp.Xpo.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Map.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.Base.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Persistent.BaseImpl.EF.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Snap.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Carousel.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Docking.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Printing.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Mvvm.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Grid.v15.2.Extensions, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Map.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.NavBar.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.PivotGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Scheduler.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Spreadsheet.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.DXStyle.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2007Black.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2016Colorful.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpf.Themes.Office2016White.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v15.2.Wizard, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v15.2.UI, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraDiagram.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v15.2.Presets, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraNavBar.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.2.Extensions, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v15.2.Core, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v15.2.Reporting.Extensions, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v15.2.Reporting, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v15.2, Version=15.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.DirectoryServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.DirectoryServices.AccountManagement">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.DirectoryServices.Protocols">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Printing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Deployment">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CRM\BonusTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\BonusTransaction.Designer.cs">
+      <DependentUpon>BonusTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CrmCartTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\CrmCartTransfer.Designer.cs">
+      <DependentUpon>CrmCartTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CrmEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\CrmEditForm.Designer.cs">
+      <DependentUpon>CrmEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CrmGift.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\CrmGift.Designer.cs">
+      <DependentUpon>CrmGift.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CrmLogs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\CrmLogs.Designer.cs">
+      <DependentUpon>CrmLogs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CrmGiftDocumentDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\CrmGiftDocumentDetail.Designer.cs">
+      <DependentUpon>CrmGiftDocumentDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CrmPosition.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\CrmPosition.Designer.cs">
+      <DependentUpon>CrmPosition.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CrmPositionNewEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\CrmPositionNewEdit.Designer.cs">
+      <DependentUpon>CrmPositionNewEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CrmTransactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\CrmTransactions.Designer.cs">
+      <DependentUpon>CrmTransactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CustomersFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\CustomersFrm.Designer.cs">
+      <DependentUpon>CustomersFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRM\CrmGiftItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRM\CrmGiftItems.Designer.cs">
+      <DependentUpon>CrmGiftItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\CassReciveng.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\CassReciveng.Designer.cs">
+      <DependentUpon>CassReciveng.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\KassTransactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\KassTransactions.Designer.cs">
+      <DependentUpon>KassTransactions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\LogForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\LogForm.Designer.cs">
+      <DependentUpon>LogForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\ProcForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\ProcForm.Designer.cs">
+      <DependentUpon>ProcForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\ActiveDirectory.cs" />
+    <Compile Include="Administrator\GeneralPermissions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\GeneralPermissions.Designer.cs">
+      <DependentUpon>GeneralPermissions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\GroupMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\GroupMembers.Designer.cs">
+      <DependentUpon>GroupMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\Groups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\Groups.Designer.cs">
+      <DependentUpon>Groups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\NewGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\NewGroup.Designer.cs">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\NewUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\NewUser.Designer.cs">
+      <DependentUpon>NewUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\Permissions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\Permissions.Designer.cs">
+      <DependentUpon>Permissions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\CrmList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\CrmList.Designer.cs">
+      <DependentUpon>CrmList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\DomainManager.cs" />
+    <Compile Include="General\AcceptForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\AcceptForm.Designer.cs">
+      <DependentUpon>AcceptForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\EndUserDesigner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\EndUserDesigner.Designer.cs">
+      <DependentUpon>EndUserDesigner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\FirmList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\FirmList.Designer.cs">
+      <DependentUpon>FirmList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\Functions.cs" />
+    <Compile Include="General\ClientCards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\ClientCards.Designer.cs">
+      <DependentUpon>ClientCards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Designs\PrintRibbonControllerResources.Designer.cs">
+      <DependentUpon>PrintRibbonControllerResources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Designs\Reporting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Designs\Reporting.Designer.cs">
+      <DependentUpon>Reporting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\RequestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\RequestForm.Designer.cs">
+      <DependentUpon>RequestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\SetAmount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\SetAmount.Designer.cs">
+      <DependentUpon>SetAmount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\Wait.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\Wait.Designer.cs">
+      <DependentUpon>Wait.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginPanel.Designer.cs">
+      <DependentUpon>LoginPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logistcs\GroupOrderMembers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logistcs\GroupOrderMembers.Designer.cs">
+      <DependentUpon>GroupOrderMembers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logistcs\MaterialTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logistcs\MaterialTransfer.Designer.cs">
+      <DependentUpon>MaterialTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logistcs\MinMaxStokLevelControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logistcs\MinMaxStokLevelControl.Designer.cs">
+      <DependentUpon>MinMaxStokLevelControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logistcs\NewOrderGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logistcs\NewOrderGroup.Designer.cs">
+      <DependentUpon>NewOrderGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logistcs\PivotGridForOrderGroup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logistcs\PivotGridForOrderGroup.Designer.cs">
+      <DependentUpon>PivotGridForOrderGroup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logistcs\Reporting\TransferredAmountControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logistcs\Reporting\TransferredAmountControlForm.Designer.cs">
+      <DependentUpon>TransferredAmountControlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logistcs\VeyseloglunaSifaris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logistcs\VeyseloglunaSifaris.Designer.cs">
+      <DependentUpon>VeyseloglunaSifaris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logistcs\NewWhouseOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logistcs\NewWhouseOrder.Designer.cs">
+      <DependentUpon>NewWhouseOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logistcs\OrderGroups.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logistcs\OrderGroups.Designer.cs">
+      <DependentUpon>OrderGroups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logistcs\OrderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logistcs\OrderList.Designer.cs">
+      <DependentUpon>OrderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logistcs\WhouseOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logistcs\WhouseOrders.Designer.cs">
+      <DependentUpon>WhouseOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.Functions.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\Modul.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\Modul.Designer.cs">
+      <DependentUpon>Modul.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Market\BarcodeEnterFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Market\BarcodeEnterFrm.Designer.cs">
+      <DependentUpon>BarcodeEnterFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Market\MobileNumbers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Market\MobileNumbers.Designer.cs">
+      <DependentUpon>MobileNumbers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Market\DocumentControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Market\DocumentControl.Designer.cs">
+      <DependentUpon>DocumentControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Market\EndirimliQiymet\PrcChange.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Market\EndirimliQiymet\PrcChange.Designer.cs">
+      <DependentUpon>PrcChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Market\EndirimliQiymet\PrcDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Market\EndirimliQiymet\PrcDetail.Designer.cs">
+      <DependentUpon>PrcDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Market\EndirimliQiymet\PrcItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Market\EndirimliQiymet\PrcItems.Designer.cs">
+      <DependentUpon>PrcItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Market\Cashiers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Market\Cashiers.Designer.cs">
+      <DependentUpon>Cashiers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Market\MobilePrintList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Market\MobilePrintList.Designer.cs">
+      <DependentUpon>MobilePrintList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Administrator\ReportDesigns\Designs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Administrator\ReportDesigns\Designs.Designer.cs">
+      <DependentUpon>Designs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Market\MQ\MaterialTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Market\MQ\MaterialTransaction.Designer.cs">
+      <DependentUpon>MaterialTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Market\MQ\Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Market\MQ\Invoice.Designer.cs">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Market\MQ\MqProject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Market\MQ\MqProject.Designer.cs">
+      <DependentUpon>MqProject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Market\MQ\RequestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Market\MQ\RequestForm.Designer.cs">
+      <DependentUpon>RequestForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Market\MQ\MaterialTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Market\MQ\MaterialTransfer.Designer.cs">
+      <DependentUpon>MaterialTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Market\PriceEtiketPrint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Market\PriceEtiketPrint.Designer.cs">
+      <DependentUpon>PriceEtiketPrint.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Market\ReportTamplateUserPermissions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Market\ReportTamplateUserPermissions.Designer.cs">
+      <DependentUpon>ReportTamplateUserPermissions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\PurchaseDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\PurchaseDetails.Designer.cs">
+      <DependentUpon>PurchaseDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\NewPurchOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\NewPurchOrder.Designer.cs">
+      <DependentUpon>NewPurchOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\PurchaseOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\PurchaseOrders.Designer.cs">
+      <DependentUpon>PurchaseOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase\OrderDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase\OrderDetails.Designer.cs">
+      <DependentUpon>OrderDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="General\Registr.cs" />
+    <Compile Include="Resources\Query.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Query.resx</DependentUpon>
+    </Compile>
+    <Compile Include="General\User.cs" />
+    <Compile Include="General\Variables.cs" />
+    <Compile Include="Service References\ErpWebService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Administrator\GeneralPermissions.resx">
+      <DependentUpon>GeneralPermissions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\GroupMembers.resx">
+      <DependentUpon>GroupMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\Groups.resx">
+      <DependentUpon>Groups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\NewGroup.resx">
+      <DependentUpon>NewGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\NewUser.resx">
+      <DependentUpon>NewUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\Permissions.resx">
+      <DependentUpon>Permissions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\BonusTransaction.resx">
+      <DependentUpon>BonusTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\CrmCartTransfer.resx">
+      <DependentUpon>CrmCartTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\CrmEditForm.resx">
+      <DependentUpon>CrmEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\CrmGift.resx">
+      <DependentUpon>CrmGift.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\CrmLogs.resx">
+      <DependentUpon>CrmLogs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\CrmGiftDocumentDetail.resx">
+      <DependentUpon>CrmGiftDocumentDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\CrmPosition.resx">
+      <DependentUpon>CrmPosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\CrmPositionNewEdit.resx">
+      <DependentUpon>CrmPositionNewEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\CrmTransactions.resx">
+      <DependentUpon>CrmTransactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\CustomersFrm.resx">
+      <DependentUpon>CustomersFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRM\CrmGiftItems.resx">
+      <DependentUpon>CrmGiftItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\CassReciveng.resx">
+      <DependentUpon>CassReciveng.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\KassTransactions.resx">
+      <DependentUpon>KassTransactions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\LogForm.resx">
+      <DependentUpon>LogForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\ProcForm.resx">
+      <DependentUpon>ProcForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\AcceptForm.resx">
+      <DependentUpon>AcceptForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\CrmList.resx">
+      <DependentUpon>CrmList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\EndUserDesigner.resx">
+      <DependentUpon>EndUserDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\FirmList.resx">
+      <DependentUpon>FirmList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\ClientCards.resx">
+      <DependentUpon>ClientCards.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designs\PrintRibbonControllerResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>PrintRibbonControllerResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Designs\Reporting.resx">
+      <DependentUpon>Reporting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\RequestForm.resx">
+      <DependentUpon>RequestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\SetAmount.resx">
+      <DependentUpon>SetAmount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\Wait.resx">
+      <DependentUpon>Wait.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginPanel.resx">
+      <DependentUpon>LoginPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logistcs\GroupOrderMembers.resx">
+      <DependentUpon>GroupOrderMembers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logistcs\MaterialTransfer.resx">
+      <DependentUpon>MaterialTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logistcs\MinMaxStokLevelControl.resx">
+      <DependentUpon>MinMaxStokLevelControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logistcs\NewOrderGroup.resx">
+      <DependentUpon>NewOrderGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logistcs\PivotGridForOrderGroup.resx">
+      <DependentUpon>PivotGridForOrderGroup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logistcs\Reporting\TransferredAmountControlForm.resx">
+      <DependentUpon>TransferredAmountControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logistcs\VeyseloglunaSifaris.resx">
+      <DependentUpon>VeyseloglunaSifaris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logistcs\NewWhouseOrder.resx">
+      <DependentUpon>NewWhouseOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logistcs\OrderGroups.resx">
+      <DependentUpon>OrderGroups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logistcs\OrderList.resx">
+      <DependentUpon>OrderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logistcs\WhouseOrders.resx">
+      <DependentUpon>WhouseOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\Modul.resx">
+      <DependentUpon>Modul.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Market\BarcodeEnterFrm.resx">
+      <DependentUpon>BarcodeEnterFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Market\MobileNumbers.resx">
+      <DependentUpon>MobileNumbers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Market\DocumentControl.resx">
+      <DependentUpon>DocumentControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Market\EndirimliQiymet\PrcChange.resx">
+      <DependentUpon>PrcChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Market\EndirimliQiymet\PrcDetail.resx">
+      <DependentUpon>PrcDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Market\EndirimliQiymet\PrcItems.resx">
+      <DependentUpon>PrcItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Market\Cashiers.resx">
+      <DependentUpon>Cashiers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Market\MobilePrintList.resx">
+      <DependentUpon>MobilePrintList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Administrator\ReportDesigns\Designs.resx">
+      <DependentUpon>Designs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Market\MQ\MaterialTransaction.resx">
+      <DependentUpon>MaterialTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Market\MQ\Invoice.resx">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Market\MQ\MqProject.resx">
+      <DependentUpon>MqProject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Market\MQ\RequestForm.resx">
+      <DependentUpon>RequestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Market\MQ\MaterialTransfer.resx">
+      <DependentUpon>MaterialTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Market\PriceEtiketPrint.resx">
+      <DependentUpon>PriceEtiketPrint.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Market\ReportTamplateUserPermissions.resx">
+      <DependentUpon>ReportTamplateUserPermissions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\PurchaseDetails.resx">
+      <DependentUpon>PurchaseDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\NewPurchOrder.resx">
+      <DependentUpon>NewPurchOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\PurchaseOrders.resx">
+      <DependentUpon>PurchaseOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase\OrderDetails.resx">
+      <DependentUpon>OrderDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Query.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Query.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.AboutCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ArrayOfString.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.CategoriesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ChangePasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ChangeUserStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsAboutCustomer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsCompaings.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsCustLocation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsCustomerBasedPrice.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsCustomers.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsDailyTotal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsDevices.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsEkstre.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsFeedback.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsHistory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsHolidayWish.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsItemOperation.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsItemsDetail.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsLimitAverage.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsNewsFeed.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsNewSku.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsNoSaleCouse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsPlanFollow.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsPlanReport.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsPriceChanges.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsProductPackPer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsProducts.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsProductsCategory.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsProPackCustGroupPer.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsResult.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsReturnCouse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsRpInvoiceLines.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsStock.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsUser.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsUserCode.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsUserPermission.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsUsers.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsUserWarehouse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsVirmanLines.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsWrBrands.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsWrFacings.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ClsWrParameters.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.CompaingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ConfirmOrdersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ControlIsRootResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.CustomerBasedPriceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.CustomerDebtResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.CustomerDebtWithRiskResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.CustomerLocationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.CustomerProducts.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.CustomersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.DailyTotalResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.DailyTotalWithUsernameResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.DecryptResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.DeleteNewsFeedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.DeleteRouteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.DeviceAutenticationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.DeviceRegistrationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.EkstreResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.EncryptResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.FeedbackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.GetBuyedProductsReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.GetCustomerProductsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.GetCustomerRateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.GetCustomersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.GetDevicesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.getDisticntResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.GetFeedbacksResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.GetInvoiceRefResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.GetLimitAverageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.GetLogoDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.GetOrderLinesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.GetOrdersBySlCodeAndClCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.GetOrdersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.GetPlanogramResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.GetUsersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.GetVirmanLinesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.GetWrBrandsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.GetWrFacingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.GetWrParametersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.HelloNamiqResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.HistoryResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.HistoryWithDateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.HolidayWishResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ItemOperationOnCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.LastUpdateLogResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.LoadPlanFollowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.LogoInvoiceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.LogoInvoiceWithResultResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.LogoLoginTestResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.LogoOrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.LogoOrderWebResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.LogoOrderWithResultResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.LogoPaymentOperationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.LogoPaymentResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.LogoQaytarmaOrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.LogoQaytarmaOrderWithResultResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.NewsFeedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.NewSkuResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.NoSalecouseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.OrderLines.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.Orders.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.PackageInOperationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.PackageInProductsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.PlanReportResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.PriceChangesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ProductDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ProductPackCustomerPermissionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ProductPackPermissionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ProductsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ProductStockResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ProfileImageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.QaytarResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ResetUserPasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ReturnCouseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.RpEkstreInvoiceLiensResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.SetAboutCustomerResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.SetCustomerRateResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.SetDeviceStatusResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.SetLocationDataResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.SetNewsFeedResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.SetNoSaleCouseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.SetRiskLimitiResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.SetRouteOpenCloseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.SetRouteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.SetWrBrandsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.SetWrFacingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.SetWrParametersResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.SyncLogoCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.TestClass.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.TestLogoOrderResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.ToBase64Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.TodayCurrencyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.UploadImageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.UserAutenticationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.UserCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.UserPermissionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.UserPermissionWithCodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.UserProfileImageResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.UserWarehouseResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\ERP.ErpWebService.WriteAnswerToFeedbackResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ErpWebService\Service.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dock-icon_580-100025091-large_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12065698671516857163pitr_red_menu_icon_set_2.svg.hi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\araz-604x345.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12355.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\123551.png" />
+    <None Include="Resources\скачанные файлы.png" />
+    <None Include="Resources\скачанные файлы1.png" />
+    <None Include="Resources\_png_converted.png" />
+    <None Include="Resources\_png_converted %281%29.png" />
+    <None Include="Service References\ErpWebService\Service.disco" />
+    <None Include="Service References\ErpWebService\configuration91.svcinfo" />
+    <None Include="Service References\ErpWebService\configuration.svcinfo" />
+    <None Include="Service References\ErpWebService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Resources\_2_jpg.ico" />
+    <None Include="Resources\images %281%29.png" />
+    <None Include="Resources\images %2818%29.jpg" />
+    <None Include="Resources\images %288%29.jpg" />
+    <None Include="Resources\invoiceicon.jpg" />
+    <None Include="Resources\print_icon.png" />
+    <None Include="Resources\show_detail.jpg" />
+    <None Include="Resources\скачанные файлы %282%29.jpg" />
+    <None Include="Resources\скачанные файлы.jpg" />
+    <None Include="Resources\icon_lorry.ico" />
+    <None Include="Resources\contract_512.ico" />
+    <Content Include="top_home_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="UnityObjects">
+      <Guid>{51F6657D-9972-45FD-8D5D-98849802A9C9}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Administrator\Properties\" />
+    <Folder Include="MaterialManagment\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ErpWebService\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
